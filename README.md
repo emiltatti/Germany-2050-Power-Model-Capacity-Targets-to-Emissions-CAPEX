@@ -40,9 +40,9 @@ Targets are defined for:
 
 Between anchor years:
 
-\[
+$$
 \text{Capacity}_{t} = \text{Interpolated between policy targets}
-\]
+$$
 
 ---
 
@@ -50,10 +50,9 @@ Between anchor years:
 
 Annual renewable generation:
 
-\[
-\text{Generation}_{i,t} =
-\text{Capacity}_{i,t} \times 8760 \times CF_i
-\]
+$$
+\text{Generation}_{i,t} = \text{Capacity}_{i,t} \times 8760 \times CF_i
+$$
 
 Where:
 
@@ -72,14 +71,9 @@ Coal generation declines linearly to zero by 2038.
 
 Gas fills the residual:
 
-\[
-\text{Gas}_t =
-\max \left(0,
-\text{Demand}_t -
-\text{Clean}_t -
-\text{Coal}_t
-\right)
-\]
+$$
+\text{Gas}_t = \max \left(0, \text{Demand}_t - \text{Clean}_t - \text{Coal}_t \right)
+$$
 
 Curtailment is explicitly computed when renewable output exceeds demand.
 
@@ -87,11 +81,9 @@ Curtailment is explicitly computed when renewable output exceeds demand.
 
 ### 2.3 Emissions
 
-\[
-\text{Emissions}_t =
-E_{\text{coal}} \cdot \text{Coal}_t +
-E_{\text{gas}} \cdot \text{Gas}_t
-\]
+$$
+\text{Emissions}_t = E_{\text{coal}} \cdot \text{Coal}_t + E_{\text{gas}} \cdot \text{Gas}_t
+$$
 
 Emission factors (MtCO₂ per TWh):
 
@@ -100,10 +92,9 @@ Emission factors (MtCO₂ per TWh):
 
 Intensity:
 
-\[
-\text{Intensity}_t =
-\frac{\text{Emissions}_t}{\text{Demand}_t} \div 0.001
-\]
+$$
+\text{Intensity}_t = \frac{\text{Emissions}_t}{\text{Demand}_t} \div 0.001
+$$
 
 (Conversion: \(1 \text{ g/kWh} = 0.001 \text{ Mt/TWh}\))
 
@@ -113,10 +104,9 @@ Intensity:
 
 Annual CAPEX:
 
-\[
-\text{CAPEX}_{i,t} =
-\Delta \text{Capacity}_{i,t} \times 10^6 \times c_i
-\]
+$$
+\text{CAPEX}_{i,t} = \Delta \text{Capacity}_{i,t} \times 10^6 \times c_i
+$$
 
 Where:
 
