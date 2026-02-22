@@ -96,7 +96,7 @@ $$
 \text{Intensity}_t = \frac{\text{Emissions}_t}{\text{Demand}_t} \div 0.001
 $$
 
-(Conversion: \(1 \text{ g/kWh} = 0.001 \text{ Mt/TWh}\))
+(Conversion: 1 g/kWh = 0.001 Mt/TWh)
 
 ---
 
